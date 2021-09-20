@@ -96,7 +96,7 @@ zipcode <- zipcode %>%
 
 ggplot(zipcode)+
   geom_sf(color = NA,
-          aes(fill = num_busstop))+
+          aes(fill = num_busstop))+ 
   scale_fill_viridis_c(name = "Boston zipcode\nby number of busstop",
                        breaks = breaks <- seq(0,30, by = 4),
                        labels = paste(prettyNum(breaks),
@@ -104,6 +104,7 @@ ggplot(zipcode)+
   annotation_scale(location = "br")+
   annotation_north_arrow(location = "tr",
                          style = north_arrow_minimal())+
+
 theme_map()+
   theme(
     legend.position = "left",
