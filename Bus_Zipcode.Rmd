@@ -86,7 +86,7 @@ ggplot(zipcode_buffer)+
 ```{r}
 busstop <- busstop %>%
   st_join(zipcode) %>%
-    mutate(by_zipcode = !is.na(ZIP_CODE))
+  mutate(by_zipcode = !is.na(ZIP_CODE.y))
 ```
 
 
